@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+}
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  @font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Regular'),
+      url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+      url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-SemiBold'),
+      url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Bold'),
+      url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+      url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  body {
+    font-family: 'OpenSans', sans-serif;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 80px 40px 80px 40px;
+}
+.test-form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/hero1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flex {
+   display: flex;
+}
+.form {
+  border: 1px solid #CACACA;
+  position: relative;
+  transform: skewX(-45deg);
+}
+.form__input {
+cursor: pointer;
+width: 90%;
+padding: 15px;
+background: rgba(255, 255, 255, 0.5);
+}
+input::placeholder {
+  transform: skewX(45deg);
+}
+.form__btn::before {
+  content: "ЗАКАЗАТЬ";
+  transform: skewX(45deg);
+  display: block
+
+}
+.form__btn {
+  cursor: pointer;
+  font-size: 15px;
+  color: #FFFFFF;
+  background-color: red;
+  width: 200px;
+  border: 1px solid #CACACA;
+  padding: 15px;
+  display: inline-block;
+}
+
+.js-validate-error-label{
+  position: absolute;
+  top: -30px;
+}
+@media (max-width: 400px) {
+  .container {
+    max-width: 400px;
+  }
+  .form {
+    transform: skewX(0deg);
+  }
+  .form__input  {
+    font-size: 70%;
+  }
+  .form__btn {
+    font-size: 10px;
+    width: 100px;
+  }
+  input::placeholder {
+    transform: skewX(0deg);
+  }
+  .form__btn::before {
+    transform: skewX(0deg);
+}
+}
+
